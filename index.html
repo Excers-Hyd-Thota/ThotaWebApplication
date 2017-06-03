@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "App">
+<head>
+<title>Thota.org</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="CSS/General/animate.css">
+	<link rel="stylesheet" href="CSS/General/bootstrap.min.css">
+	<script src="Scripts/Angualr/angular.min.js"></script>
+	<link rel="stylesheet" href="CSS/App.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="Scripts/Angualr/angular-route.min.js"></script>
+	<script src="controllers/route.js"></script>
+	<script src="controllers/main_controller.js"></script>
+	<link rel="stylesheet" href="CSS/login.css">
+
+
+</head>
+ <body>
+ <div id="main_header" class="navbar navbar-inverse">
+ 	<div class="collapse navbar-collapse">
+	<h1><a href="">Thota.org</a></h1>
+		<ul id="thota-header-menu" class="nav navbar-nav">
+		<li><a href="#home">Home</a></li>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Technologies <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a href="#angular" title="">Angular JS</a></li>
+		<li><a href="#programinglanguages" title="">Programming Languages</a></li>
+		<li><a href="#databasemanagement" title="">Database Management</a></li>
+		<li><a href="#webtech" title="">Web Technologies</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Personality Development <span class="caret"></span></a>		
+		<ul class="dropdown-menu">
+		<li><a href="#" title="">English Speaking Skills</a></li>
+		<li><a href="#" title="">Interview Skills</a></li>
+		<li><a href="#" title="">Interpesonnel Skills</a></li>
+		<li><a href="#" title="">Other Skills</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Companies<span class="caret"></span></a>		
+		<ul class="dropdown-menu">
+		<li><a href="#main_content" title="">Excers</a></li>
+		<li><a href="#" title="">Tech Mahindra</a></li>
+		<li><a href="#" title="">TCS</a></li>
+		<li><a href="#" title="">Google</a></li>
+		<li><a href="#" title="">Facebook</a></li>
+		<li><a href="#" title="">Linked-in</a></li>
+		<li><a href="#" title="">Verizon</a></li>		
+		</ul>
+		</li>		
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Test<span class="caret"></span></a>		
+		<ul class="dropdown-menu">
+		<li><a href="#" title="">1</a></li>
+		<li><a href="#" title="">2</a></li>
+		<li><a href="#" title="">3</a></li>
+		<li><a href="#" title="">4</a></li>
+		<li><a href="#" title="">5</a></li>
+		<li><a href="#" title="">6</a></li>
+		<li><a href="#" title="">7</a></li>		
+		</ul>
+		</li>		
+		</ul>
+		<ul class="nav navbar-nav navbar-right" ng-hide="authenticated">
+			<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+				sign In/sign Up</button>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+					 aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+										<!-- Nav tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+											<li><a href="#Registration" data-toggle="tab">Registration</a></li>
+										</ul>
+										<!-- Tab panes -->
+										<div class="tab-content">
+											<div class="tab-pane active" id="Login">
+												<form role="form" class="form-horizontal">
+													<div class="form-group">
+														<label for="email" class="col-sm-2 control-label">
+															Email</label>
+														<div class="col-sm-10">
+															<input type="email" class="form-control" id="email1" placeholder="Email" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="exampleInputPassword1" class="col-sm-2 control-label">
+															Password</label>
+														<div class="col-sm-10">
+															<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-2">
+														</div>
+														<div class="col-sm-10">
+															<button type="submit" class="btn btn-primary btn-sm">
+																Submit</button>
+															<a href="javascript:;">Forgot your password?</a>
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="tab-pane" id="Registration">
+												<form role="form" class="form-horizontal">
+													<div class="form-group">
+														<label for="email" class="col-sm-2 control-label">
+															Name</label>
+														<div class="col-sm-10">
+															<div class="row">
+																<div class="col-md-3">
+																	<select class="form-control">
+																		<option>Mr.</option>
+																		<option>Ms.</option>
+																		<option>Mrs.</option>
+																	</select>
+																</div>
+																<div class="col-md-9">
+																	<input type="text" class="form-control" placeholder="Name" />
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="email" class="col-sm-2 control-label">
+															Email</label>
+														<div class="col-sm-10">
+															<input type="email" class="form-control" id="email" placeholder="Email" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="mobile" class="col-sm-2 control-label">
+															Mobile</label>
+														<div class="col-sm-10">
+															<input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="password" class="col-sm-2 control-label">
+															Password</label>
+														<div class="col-sm-10">
+															<input type="password" class="form-control" id="password" placeholder="Password" />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-2">
+														</div>
+														<div class="col-sm-10">
+															<button type="button" class="btn btn-primary btn-sm">
+																Save & Continue</button>
+															<button type="button" class="btn btn-default btn-sm">
+																Cancel</button>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+ </div>
+ <loginreg-modal> </loginreg-modal>
+ <ng-view></ng-view>
+</body>
+</html>

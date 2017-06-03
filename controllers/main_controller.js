@@ -1,5 +1,4 @@
-var myWebApp=angular.module("myWebApp",[]);
-myWebApp.controller("shareExp",function($scope){
+app.controller("shareExp",function($scope){
 	$scope.formExpFlag=false;
 	$scope.companyName;
 	$scope.expComments;

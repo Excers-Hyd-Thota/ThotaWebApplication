@@ -1,0 +1,325 @@
+
+body {
+  overflow-x:hidden;
+}
+
+#BookingDateTimePicker .timepicker {
+  padding-left: 12%;
+  width: 43%;
+}
+
+#homePanelText{
+  font-size: large;
+  padding-left: 20%;
+}
+
+
+.menuItemsLogin{
+  text-align: center;
+  padding-top: 0.7%;
+  margin-right: 1%;
+}
+
+div.menuItems:hover,  .myhover {
+  border: 2px rgba(0, 0, 0, 0.5) solid;
+  cursor: pointer;
+}
+
+div.menuItems:active {
+  border: 1px rgba(0, 0, 0, 0.5) solid;
+}
+
+/*#menu a:active, #menu a:hover {
+border: 1px rgba(8, 117, 31, 0.72) solid;
+cursor: pointer;
+}*/
+.menuItems {
+  text-align: center;
+  padding-top: 0.7%;
+  margin-right: 1%;
+  font: normal normal normal 13px/1.4em raleway,sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+}
+
+#menu {
+  margin-top: 2%;
+  margin-bottom: 1%;
+ overflow: hidden;
+}
+
+.homeCarousel{
+  margin-top: 0;
+ height: 100%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+.carouselItems {
+  object-fit: cover;
+  width: 100%;
+  height: 630px !important;
+}
+
+.fa-chevron-left:before{
+  top: 10%;
+}
+
+.carousel-control {
+  width: 8%;
+  opacity: 0.7;
+  padding-top: 15%;
+}
+
+#aboutMeImage {
+  height: auto;
+  width: 50%;
+  position: fixed;
+}
+
+#aboutMeText {
+  font-family: monospace;
+  color: #8e5c21;
+  font-size: x-large;
+}
+
+.aboutMe hr {
+  margin-top: 2px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #732323;
+  width: 97%;
+  margin-left: 0px !important;
+}
+
+.aboutMe{
+
+}
+
+#eventsPageTitle{
+  text-align: -webkit-center;
+  color: #080808;
+  background: transparent;
+  font: normal normal normal 30px/1.4em 'eb garamond',serif;
+letter-spacing: 0.1em;
+}
+#hr1{
+  width: 60px;
+  border-style: solid;
+  border-width: 1px;
+
+  margin-left: 47%;
+}
+
+#eventsPagePanel{
+  height: 150pt;
+}
+
+#eventsPagePanel:hover{
+  box-shadow: 11px 11px 25px #b3c5a2;
+}
+
+
+#eventsPage .panel-primary .panel-heading {
+  text-align:center;
+  background-color:rgba(11, 102, 105, 0.98);
+  background-image:none;
+  font-size: large;
+}
+
+#eventsDetailsTitle {
+  font: normal normal normal 40px/1.4em 'eb garamond',serif;
+  letter-spacing: 0.1em;
+}
+
+#eventsDetailsPage{
+  margin-top:2%;
+}
+
+#eventDetailsForm{
+  font-size:x-large;
+  font-family: normal normal normal 13px/1.4em raleway,sans-serif;
+}
+
+#eventsDetailsBookBtn{
+  margin-top:5%;
+}
+
+#AboutPageTitle {
+  font: normal normal normal 30px/1.4em 'eb garamond',serif;
+letter-spacing: 0.1em;
+}
+
+#ContactPageTitle{
+  font: normal normal normal 30px/1.4em 'eb garamond',serif;
+letter-spacing: 0.1em;
+}
+
+
+.AboutMeHeading{
+  color: #e3f311;
+  font-size: larger;
+}
+#contactImage{
+  margin-left: 9%;
+  width: 83%;
+  /*height: 38em;*/
+  /*margin-top: 2%;*/
+}
+
+
+.BookPageTitle{
+  font:normal normal normal 40px/1.4em 'eb garamond',serif;
+  letter-spacing: 0.1em;
+}
+
+.admin{
+  font:normal normal normal 20px/1.1em 'eb garamond',serif;
+  padding-left: 3px;
+
+}
+
+#loginMenuTab .dropbtn {
+  /* background-color: #4CAF50; */
+  /* color: white; */
+  /* padding: 16px; */
+  /* font-size: 16px; */
+  /* border: none; */
+  /*cursor: pointer;
+
+  text-align: center;
+  padding-top: 0.7%;
+  margin-right: 1%;
+  font: normal normal normal 13px/1.4em raleway,sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);*/
+
+}
+
+#loginMenuTab .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#loginMenuTab .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: rgb(220, 220, 199);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:1;
+}
+
+#loginMenuTab .dropdown-content a {
+  color: black;
+  padding: 11%;
+  text-decoration: none;
+  display: block;
+}
+
+#loginMenuTab .dropdown-backdrop {
+  position: absolute;
+}
+
+#loginMenuTab .dropdown-content a:hover
+{ background-color: #97d298;}
+
+#loginMenuTab .dropdown.open .dropdown-content {
+  display: block;
+}
+
+#loginMenuTab .dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; */
+  /*border: 1px rgba(8, 117, 31, 0.72) solid;*/
+  cursor: pointer;
+}
+
+#login-submit, #register-submit{
+  border-color: rgba(54, 144, 28, 0.46);
+
+}
+
+#login-form-link , #register-form-link {
+  cursor:pointer;
+  font-size: large;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#login-form-link.active{
+  background: blue;
+}
+
+/*.has-error{
+background-color: black;rgb(255, 245, 224)
+}*/
+
+#eventsCards{
+  background-color: rgb(245, 245, 245);
+
+}
+
+#eventsCards .card {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  transition: box-shadow .25s;
+}
+#eventsCards:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
+#eventsCards .img-card {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+  overflow: hidden;
+}
+#eventsCards .img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover;
+  transition: all .25s ease;
+}
+#eventsCards .card-content {
+  padding:15px;
+  text-align:left;
+}
+#eventsCards .card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+#eventsCards .card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+#eventsCards .card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+#eventsCards .card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+
+#successImage{
+  margin-left: 9%;
+  width: 83%;
+  /*height: 38em;*/
+  margin-top: 2%;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+}
+
+.affix + .container-fluid {
+  padding-top: 70px;
+}

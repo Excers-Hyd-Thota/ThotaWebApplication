@@ -1,0 +1,24 @@
+
+.left-div
+{
+    float:left;
+    background-color: #D3D3D3;
+}
+.right-div
+{
+    float:right;
+    background-color: #D3D3D3;
+}
+.main-div
+{
+    margin-left:200px;
+    margin-right:200px;
+    background-color: #F5F5F5;
+}
+.comments_area{
+    background-color: #78DADD;
+}
+
+.dropdown-menu{
+min-width: 280px;!important;
+}
