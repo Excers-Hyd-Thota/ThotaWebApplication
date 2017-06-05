@@ -2,12 +2,15 @@
 .left-div
 {
     float:left;
-    background-color: #D3D3D3;
+    width: 195px;
+    box-shadow: 2px 2px 1px #888888;
 }
 .right-div
 {
     float:right;
-    background-color: #D3D3D3;
+    width: 195px;
+    margin-top: -200px;
+    box-shadow: 2px 2px 1px #888888;
 }
 .main-div
 {

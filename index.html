@@ -14,7 +14,7 @@
 	<script src="controllers/route.js"></script>
 	<script src="controllers/main_controller.js"></script>
 	<link rel="stylesheet" href="CSS/login.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="controllers/login.js"></script>
 </head>
  <body>
  <div id="main_header" class="navbar navbar-inverse">
@@ -67,105 +67,91 @@
 		</ul>
 		<ul class="nav navbar-nav navbar-right" ng-hide="authenticated">
 			<li><button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-				sign In/sign Up</button>
+				Login / Register</button>
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
 					 aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-							</div>
-							<div class="modal-body">
-								<div class="row">
-									<div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
-										<!-- Nav tabs -->
-										<ul class="nav nav-tabs">
-											<li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
-											<li><a href="#Registration" data-toggle="tab">Registration</a></li>
-										</ul>
-										<!-- Tab panes -->
-										<div class="tab-content">
-											<div class="tab-pane active" id="Login">
-												<form role="form" class="form-horizontal">
-													<div class="form-group">
-														<label for="email" class="col-sm-2 control-label">
-															Email</label>
-														<div class="col-sm-10">
-															<input type="email" class="form-control" id="email1" placeholder="Email" />
-														</div>
-													</div>
-													<div class="form-group">
-														<label for="exampleInputPassword1" class="col-sm-2 control-label">
-															Password</label>
-														<div class="col-sm-10">
-															<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" />
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-sm-2">
-														</div>
-														<div class="col-sm-10">
-															<button type="submit" class="btn btn-primary btn-sm">
-																Submit</button>
-															<a href="javascript:;">Forgot your password?</a>
-														</div>
-													</div>
-												</form>
+					<div class="container login-reg-model">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<div class="panel panel-login">
+									<div class="panel-heading">
+										<div class="row">
+											<div class="col-xs-6">
+												<a href="#" class="active" id="login-form-link">Login</a>
 											</div>
-											<div class="tab-pane" id="Registration">
-												<form role="form" class="form-horizontal">
+											<div class="col-xs-6">
+												<a href="#" id="register-form-link">Register</a>
+											</div>
+										</div>
+										<hr>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-lg-12">
+												<form id="login-form"  action="#" method="post" role="form" style="display: block;">
 													<div class="form-group">
-														<label for="email" class="col-sm-2 control-label">
-															Name</label>
-														<div class="col-sm-10">
-															<div class="row">
-																<div class="col-md-3">
-																	<select class="form-control">
-																		<option>Mr.</option>
-																		<option>Ms.</option>
-																		<option>Mrs.</option>
-																	</select>
-																</div>
-																<div class="col-md-9">
-																	<input type="text" class="form-control" placeholder="Name" />
-																</div>
+														<input type="text" name="username" id="username" tabindex="1" class="form-control" required  placeholder="Username" value="">
+													</div>
+													<div class="form-group">
+														<input type="password" name="password" id="password" tabindex="2" class="form-control" required placeholder="Password">
+													</div>
+													<div class="form-group text-center">
+														<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+														<label for="remember"> Remember Me</label>
+													</div>
+													<div class="form-group">
+														<div class="row">
+															<div class="col-sm-6 col-sm-offset-3">
+																<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
 															</div>
 														</div>
 													</div>
 													<div class="form-group">
-														<label for="email" class="col-sm-2 control-label">
-															Email</label>
-														<div class="col-sm-10">
-															<input type="email" class="form-control" id="email" placeholder="Email" />
+														<div class="row">
+															<div class="col-lg-12">
+																<div class="text-center">
+																	<a href="#" tabindex="5" class="forgot-password">Forgot Password?</a>
+																</div>
+															</div>
 														</div>
+													</div>
+												</form>
+												<form id="register-form" action="#" method="post" role="form" style="display: none;">
+													<div class="form-group">
+														<input type="text" name="rollno" id="rollno" tabindex="1" class="form-control" placeholder="Hall ticket No.." value="">
 													</div>
 													<div class="form-group">
-														<label for="mobile" class="col-sm-2 control-label">
-															Mobile</label>
-														<div class="col-sm-10">
-															<input type="email" class="form-control" id="mobile" placeholder="Mobile" />
-														</div>
+														<input type="text" name="college" id="college" tabindex="1" class="form-control" placeholder="College" value="">
 													</div>
 													<div class="form-group">
-														<label for="password" class="col-sm-2 control-label">
-															Password</label>
-														<div class="col-sm-10">
-															<input type="password" class="form-control" id="password" placeholder="Password" />
-														</div>
+														<input type="text" name="branch" id="branch" tabindex="1" class="form-control" placeholder="Branch" value="">
 													</div>
-													<div class="row">
-														<div class="col-sm-2">
-														</div>
-														<div class="col-sm-10">
-															<button type="button" class="btn btn-primary btn-sm">
-																Save & Continue</button>
-															<button type="button" class="btn btn-default btn-sm">
-																Cancel</button>
+													<div class="form-group">
+														<input type="text" name="username" id="user.name" tabindex="1" class="form-control" placeholder="Username" value="">
+													</div>
+													<div class="form-group">
+														<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+													</div>
+													<div class="form-group">
+														<input type="text" name="mobile" id="mobile" tabindex="1" class="form-control" placeholder="Mobile No" value="">
+													</div>
+													<div class="form-group">
+														<input type="password" name="password" id="pass.word" tabindex="2" class="form-control" placeholder="Password">
+													</div>
+													<div class="form-group">
+														<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+													</div>
+													<div class="form-group">
+														<div class="row">
+															<div class="col-sm-6 col-sm-offset-3">
+																<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+															</div>
 														</div>
 													</div>
 												</form>
 											</div>
 										</div>
+									</div>
 								</div>
 							</div>
 						</div>
