@@ -25,34 +25,53 @@
 
     </div>
     <div class="main-div">
-        <div ng-controller="shareExp">
-            <div class="write_article">
-                <h4>Share your Interview Experience!</h4>
-                <hr/>
-                <input type="button" name="Write" Value="Write" class="btn btn-default" ng-click="openExpForm()"/>
-            </div>
-            <div id="art_form" ng-show="formExpFlag">
-                <form>
-                    <div class="form-group">
-                        <label for="companyName">Company Name</label>
-                        <input type="text" class="form-control" id="companyName" placeholder="Company Name" ng-model="companyName">
+        <div ng-controller="shareExp" class="shareExp">
+            <div class="jumbotron shareExpcnt">
+                <!-- Trigger the modal with a button -->
+                <div class="spantext">
+                    <h4>Share your Interview Experience.....</h4>
+                <hr>
+                </div>
+                <div class="writebtn">
+                    <button type="button" class="btn btn-default btnstyle" data-toggle="modal" data-target="#Share-expModal">write an experience</button>
+                </div>
+
+                <div class="modal fadeIn" style="border: 1px solid red" id="Share-expModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Share your Experience...</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="companyName">Company Name</label>
+                                        <input type="text" class="form-control" id="companyName" placeholder="Company Name" ng-model="companyName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="comments">Comments</label>
+                                        <textarea class="form-control" rows="10" ng-model="expComments"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-default" ng-click="submitExperience()">Post</button>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="form-group">
-                        <label for="comments">Comments</label>
-                        <textarea class="form-control" rows="10" ng-model="expComments"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-default" ng-click="submitExperience()">Post</button>
-                </form>
+                </div>
+
             </div>
             <!-- This will show all the experiences shared by everyone -->
-            <div class="comments_area">
+            <div class="jumbotron comments_area" ng-repeat="exp in experiences">
                 <table class="table table-hover">
-                    <tr ng-repeat="exp in experiences">
-                        <td>{{exp.Name}}</td>
+                    <tr>
+                        <td>{{exp.Name}}</td><br>
                         <td>{{exp.cmpnyName}}</td>
                         <td>{{exp.Comments}}</td>
                     </tr>
                 </table>
+
             </div>
         </div>
     </div>

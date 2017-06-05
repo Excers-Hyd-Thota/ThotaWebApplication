@@ -25,3 +25,40 @@
 .dropdown-menu{
 min-width: 280px;!important;
 }
+.modal-content{
+    margin-top: 20%; !important;
+}
+.shareExp{
+    width: 70%;
+    margin-left: 10%;
+    padding-top: 0;
+    height: auto;
+}
+.shareExpcnt{
+    padding-top: 0;
+    width: 100%;
+    box-shadow: 2px 2px 2px #888888;
+}
+.comments_area{
+    width: 100%;
+    box-shadow: 2px 2px 2px #888888;
+}
+.spantext{
+    padding-left: 3%;
+    line-height: 24px;
+    padding-top: 5%;
+    color: #080808;
+    background: transparent;
+    font: normal normal normal 30px/1.4em 'eb garamond',serif;
+    letter-spacing: 0.1em;
+}
+.btnstyle{
+    color: #080808;
+    background: transparent;
+    letter-spacing: 0.1em;
+    border-radius: 20px;
+}
+.writebtn{
+    border-radius: 10px;
+    margin-left: 4%;
+}
